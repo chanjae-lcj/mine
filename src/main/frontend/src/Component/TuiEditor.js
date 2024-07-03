@@ -5,14 +5,16 @@ import '@toast-ui/editor/toastui-editor.css';
 import '@toast-ui/editor/dist/theme/toastui-editor-dark.css'
 
 
-function TuiEditor() {
+function TuiEditor(props) {
     const editorRef = useRef();
     // const onChange = () => {
     //     const data = editorRef.current?.getInstance().getHTML();
     // };
     const handleClick = () => {
         // console.log(editorRef.current.getInstance().getHTML());
-        alert(editorRef.current.getInstance().getHTML());
+        alert(`제목 : ${props.title}`);
+        alert(`타입 : ${props.type}`);
+        alert(`내용 : ${editorRef.current.getInstance().getHTML()}`);
     }
     return (
         <>
