@@ -15,7 +15,7 @@ const Main = (props) => {
 			<br />
 			<br />
 			<h2>메인</h2>
-			<table class="table">
+			<table className="table">
 				<thead>
 					<tr className='table-dark'>
 						<th scope="col">번호</th>

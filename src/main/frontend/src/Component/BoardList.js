@@ -21,7 +21,7 @@ const BoardList = () => {
 			<br />
 			<br />
 			<h2>전체 게시판</h2>
-			<table class="table">
+			<table className="table">
 				<thead>
 					<tr className='table-dark'>
 						<th scope="col">번호</th>
