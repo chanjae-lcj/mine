@@ -1,0 +1,5 @@
+---------------------------------
+application.properties
+
+spring.application.name=mine
+----------------------------------
