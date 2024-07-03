@@ -124,6 +124,10 @@ table{
   font-size: 0.8em;
 }
 
+.font-size-125em{
+  font-size: 1.25em;
+}
+
 .font-bold{
   font-weight: bold;
 }
