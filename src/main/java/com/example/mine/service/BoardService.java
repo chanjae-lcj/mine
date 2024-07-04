@@ -19,6 +19,10 @@ public class BoardService {
         return boardRepository.findAll(pageable);
     }
 
+    public Board boardview(Integer id){
+        return boardRepository.findById(id).get();
+    }
+
     public void writeBoard(BoardRequestDto entity){
         Board board = new Board();
         board.setType(entity.getType());

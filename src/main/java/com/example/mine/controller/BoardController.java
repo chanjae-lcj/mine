@@ -15,6 +15,8 @@ import com.example.mine.service.BoardService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -28,6 +30,11 @@ public class BoardController {
     public List<Board> getBoardList(@PageableDefault(page=0,size=10,sort="id",direction = Sort.Direction.DESC) Pageable pageable) {
         Page<Board> boards = boardService.boardList(pageable);
         return boards.getContent();
+    }
+
+    @GetMapping("/api/boardview")
+    public Board getMethodName(@RequestParam("id") Integer param) {
+        return boardService.boardview(param);
     }
     
     @PostMapping("/api/board/write")

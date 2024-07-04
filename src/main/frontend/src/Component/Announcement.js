@@ -1,6 +1,7 @@
+/* eslint-disable */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 const Announcement = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -37,7 +38,7 @@ const Announcement = (props) => {
 						<tr key={index} className='table-dark'>
 							<th scope="row">{item.id}</th>
 							<td>{item.type}</td>
-							<td>{item.title}</td>
+							<td><Link to={`/boardview?id=${item.id}`} className='color-white'>{item.title}</Link></td>
 							<td>{item.userid}</td>
 							<td>{item.createtime}</td>
 							<td>{item.likes}</td>
