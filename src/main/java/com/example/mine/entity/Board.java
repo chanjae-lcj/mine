@@ -17,7 +17,6 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // <<Enum 을 사용하여 타입 구별>>
     private String type;
 
     private String title;

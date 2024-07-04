@@ -20,7 +20,7 @@ const Announcement = (props) => {
 			<br />
 			<br />
 			<h2>공지 사항</h2>
-			<table class="table">
+			<table className="table">
 				<thead>
 					<tr className='table-dark'>
 						<th scope="col">번호</th>
