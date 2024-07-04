@@ -3,7 +3,7 @@ import TuiEditor from './TuiEditor';
 
 const Board = () => {
     const [title, setTitle] = useState('');
-    const [type, setType] = useState('');
+    const [type, setType] = useState('free');
     const onChange = (e) => { setTitle(e.target.value) };
 
     return (

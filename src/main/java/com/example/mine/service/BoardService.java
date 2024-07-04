@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.example.mine.dto.BoardRequestDto;
 import com.example.mine.entity.Board;
 import com.example.mine.repository.BoardRepository;
 
@@ -16,5 +17,16 @@ public class BoardService {
 
     public Page<Board> boardList(Pageable pageable){
         return boardRepository.findAll(pageable);
+    }
+
+    public void writeBoard(BoardRequestDto entity){
+        Board board = new Board();
+        board.setType(entity.getType());
+        board.setTitle(entity.getTitle());
+        board.setContent(entity.getContent());
+        board.setUserid(entity.getUserid());
+        board.setLikes(0);
+        board.setCounts(0);
+        boardRepository.save(board);
     }
 }

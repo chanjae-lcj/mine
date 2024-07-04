@@ -32,8 +32,7 @@ public class BoardController {
     
     @PostMapping("/api/board/write")
     public void postBoardWrite(@RequestBody BoardRequestDto entity) {
-        //TODO: process POST request
-        System.out.println(entity.getTitle());
+        boardService.writeBoard(entity);
     }
     
 }
