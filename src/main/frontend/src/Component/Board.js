@@ -1,11 +1,12 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import TuiEditor from './TuiEditor';
-
 const Board = () => {
     const [title, setTitle] = useState('');
     const [type, setType] = useState('free');
     const onChange = (e) => { setTitle(e.target.value) };
+
+    
 
     return (
         <div className='margin-left-20'>

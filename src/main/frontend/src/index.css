@@ -144,3 +144,7 @@ table{
 .text-align-end{
   text-align: end;
 }
+
+.height-500{
+  height: 500px;
+}
