@@ -6,6 +6,7 @@ import Main from './Component/Main';
 import Announcement from './Component/Announcement';
 import BoardList from './Component/BoardList';
 import Board from './Component/Board';
+import BoardUpdate from './Component/BoardUpdate'
 import BoardView from './Component/BoardView';
 import "./index.css"
 import SideBar from './Component/SideBar';
@@ -23,6 +24,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Main/>} />
               <Route path="/board" element={<Board/>} />
+              <Route path="/boardupdate" element={<BoardUpdate/>} />
               <Route path="/boardview" element={<BoardView/>} />
               <Route path="/boardList" element={<BoardList />} />
               <Route path="/announcement" element={<Announcement />} />

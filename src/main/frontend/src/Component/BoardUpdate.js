@@ -1,10 +1,23 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import TuiEditor from './TuiEditor';
-const Board = () => {
+import axios from 'axios';
+
+
+const BoardUpdate = () => {
+    const [body, setBody] = useState([]);
     const [title, setTitle] = useState('');
     const [type, setType] = useState('free');
     const onChange = (e) => { setTitle(e.target.value) };
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const id = searchParams.get("id");
+
+    useEffect(()=> {
+    	axios.get(`/api/boardview?id=${id}`)
+		    .then(response => setBody(response.data))
+    })
 
     return (
         <div className='margin-left-20'>
@@ -36,4 +49,4 @@ const Board = () => {
     );
 };
 
-export default Board;
+export default BoardUpdate;

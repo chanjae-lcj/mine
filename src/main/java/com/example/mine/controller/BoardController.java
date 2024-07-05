@@ -1,8 +1,6 @@
 package com.example.mine.controller;
 
 import java.util.List;
-import java.io.IOException;
-import java.nio.file.Paths;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
