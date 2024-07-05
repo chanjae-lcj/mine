@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Main = (props) => {
 	const [posts, setPosts] = useState([]);
@@ -32,7 +33,7 @@ const Main = (props) => {
 						<tr key={index} className='table-dark'>
 							<th scope="row">{item.id}</th>
 							<td>{item.type}</td>
-							<td>{item.title}</td>
+							<td><Link to={`/boardview?id=${item.id}`} className='color-white'>{item.title}</Link></td>
 							<td>{item.userid}</td>
 							<td>{item.createtime}</td>
 							<td>{item.likes}</td>
