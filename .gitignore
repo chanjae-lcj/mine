@@ -37,7 +37,8 @@ out/
 .vscode/
 
 application.properties
-
+application.yml
+META-INF/
 
 # Created by https://www.toptal.com/developers/gitignore/api/react
 # Edit at https://www.toptal.com/developers/gitignore?templates=react
